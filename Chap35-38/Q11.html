@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+
+        var string = prompt("Enter a string: ");
+
+        function cappedLetter(string) {
+            var b = string.split(" "); // convert string into array each element of new array b is separated by space
+            for (var i = 0; i < b.length; i++) {
+                var x = b[i]; // store each element of array in variable x
+                var y = x.slice(0, 1); //Pick up first character of each element of array
+                var z = y.toUpperCase();// upper case first character
+                b[i] = b[i].replace(y, z); // replaces small letter with upper letter in each element of array b and storing it in array
+                
+
+            }
+            var result = b.join(" "); //convert array into string each eleemnt is separated by space
+            return result;
+
+        }
+
+        var finalAns = cappedLetter(string);
+        document.write(finalAns);
+
+
+
+    </script>
+</body>
+
+</html>

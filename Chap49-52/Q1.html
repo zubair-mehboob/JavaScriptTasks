@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Sign Up Form</h1> 
+   <fieldset>
+       <legend>Sign Up</legend>
+       <form action="" onsubmit="dispData();">
+           <label for="username">
+               User Name:
+           </label>
+           <input type="text" name="username" id="username">
+           <br>
+           <label for="fname">
+                First Name:
+            </label>
+            <input type="text" name="name" id="fname">
+            <br>
+            <label for="lname">
+                    Last Name:
+                </label>
+                <input type="text" name="name" id="lname">
+                <br>
+                <input type="submit" value="Submit" >
+       </form>
+   </fieldset>
+
+   <script>
+       function dispData(){
+        var arr = []
+        var username =document.getElementsByTagName('input');
+        var x = username.length;
+           for (var i = 0; i < x - 1; i++){
+           
+         var abc = username[i].value;
+           
+           arr.push(abc);
+           }
+
+           for (var i = 0; i < arr.length; i++){
+               document.write(arr[i] + "<br/>")
+           }
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        
+        // var a = "Z";  // 0 = 48, 9 = 57, a = 97, z  = 122, A = 65, Z = 90
+        var inp = prompt("Enter Password: ");
+        var pass = [];
+        var matchFound = false;
+        for (var i = 0; i < inp.length; i++) {
+            var asci = inp.charCodeAt(i);
+            pass.push(asci);
+        }
+       
+        for (var i = 0; i < pass.length; i++) {
+            if(matchFound){
+                    break;
+                }
+            if (pass.length >= 6 && pass[0] >= 65) {
+               
+                
+                if (pass[i] > 47 && pass[i] < 56) {
+                   
+                    
+                    for (var j = 0; j < pass.length; j++) {
+                        if (pass[i] >= 65 || pass[i] <= 90 || pass[i] >= 97 || pass[i] <= 122) {
+                            matchFound = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if (matchFound) {
+            document.write("Congratulations your password is correct!!!");
+        }
+        else{
+            document.write("Wrong!!! Please insert right password")
+        }
+        
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Money Exchange</h1>
+    <br>
+    <br>
+    <script>
+        
+        var usd = parseInt(prompt("USD: "));    
+        var saudiRiyal = parseInt(prompt("Saudi Riyal: "));
+        var usd_pkr = usd * 140.14;
+        var sr_pkr = saudiRiyal * 37.36;
+        var total = usd_pkr + sr_pkr;
+        document.write("USD to PKR is " + usd_pkr + "<br/>");
+        document.write("Saudi Riyal to PKR is " + sr_pkr + "<br/>");
+        document.write("Total Currency is " + total);
+    </script>
+</body>
+</html>

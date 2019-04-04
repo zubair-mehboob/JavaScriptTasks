@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        var matchFound = true;
+        function calculator(num1, num2, op) {
+            var ans, op, num1, num2;
+            if (op == "+") {
+                ans = num1 + num2;
+            }
+            else if (op == "-") {
+                ans = num1 - num2;
+            }
+            else if (op == "*") {
+                ans = num1 * num2;
+            }
+            else if (op == "/") {
+                ans = num1 / num2;
+            }
+            else {
+                alert("Wrong input");
+                matchFound = false;
+            }
+            return ans;
+        }
+
+        var number1 = +prompt("Enter first number: ");
+        var operator = prompt("Enter operator: ");
+        var number2 = +prompt("Enter second number: ");
+
+        var result = calculator(number1, number2, operator);
+        if (matchFound) {
+            document.write(number1 + " " + operator + " " + number2 + " " + "=" + " " + result);
+        }
+
+    </script>
+</body>
+
+</html>

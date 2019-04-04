@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var currentDate = new Date();
+        
+        var oneHourAgo = new Date();
+        alert(currentDate)
+       oneHourAgo.setHours(oneHourAgo.getHours() - 1);
+        alert(oneHourAgo)
+        alert(currentDate)
+        document.write("Current Date: " + currentDate + "<br/>" + "1 hour ago, it was " +  oneHourAgo)
+
+    </script>
+</body>
+</html>

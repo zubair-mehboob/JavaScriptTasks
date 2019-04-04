@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1 id="a"> DOM  </h1>
+        <div id="form-content" class="content">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id=""  value="Zubair Ali"/>
+            <label for="email">Email</label>
+            <input type="text" id="email"/>
+        </div>
+        <button id="ac">jkll</button>
+        <div id="main-content" class="content">
+            <p class="render" id=""> First Name : Alex</p>
+            <p class="render" id="lastName">Last Name: Bank</p>
+            <p class="render"> Email : alexbank@example.com</p>
+            <p class="render"> Country : Pakistan </p>
+            <p class="render"> contact : +92 300 1234567</p>
+        </div>
+    </div>
+
+    <div id="c"></div>
+
+    <!--JS Code-->
+
+
+    <script>
+        var mainContent = document.getElementById('main-content');
+        console.log(mainContent)
+        //document.write(mainContent.childNodes);
+        console.log(mainContent.childNodes)
+
+        var nod = mainContent.childNodes;
+        for(var i = 0; i < nod.length; i++){
+            document.write(nod[i].innerHTML + "<br/>")
+        }
+
+        var b = document.getElementsByClassName('render');
+        for(var i = 0; i < b.length; i++){
+            document.write(b[i].innerHTML+ "<br/>")
+        }
+        document.getElementById('first-name').value = "zubair";
+        var c = document.getElementById("ac").childNodes[0].nodeValue;
+        console.log(c)
+    </script>
+</body>
+
+</html>

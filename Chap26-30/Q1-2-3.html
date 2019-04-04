@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+      // Math.abs() use to conver negative value to positive value
+      var x = +prompt("Enter a positive number: ");
+      //x = Math.abs(x);
+      document.write( "Number: " + x + "<br/>");
+      document.write( "Round of value: (Round down if < .5 else Round up): " + "<strong>" + Math.round(x) + "</strong>" + "<br/>");
+      document.write( "Floor value: (Round down): " + "<strong>" + Math.floor(x) + "</strong>" + "<br/>");
+      document.write( "Ceil value: (Round up): " + "<strong>" + Math.ceil(x) + "</strong>" + "<br/>");  
+    </script>
+</body>
+</html>

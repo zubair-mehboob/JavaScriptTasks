@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        function calcCircumference(r){
+            var circumference = 2 * 3.14 * r;
+            return circumference;
+        }
+
+        function calcArea(r){
+            var area = 3.14 * r**2;
+            return area;
+        }
+
+        var radius = +prompt("Enter the radius: ");
+        var circumAns = calcCircumference(radius);
+        var areaAns = calcArea(radius);
+        document.write("The area of circle is " + areaAns + ". The circumference of circle is " + circumAns);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        var inp = prompt("Enter a sting: ");
+
+        //Word length function
+        function wordLength(inp) {
+            var arrLen = [];
+            var j = 0;
+            for (var i = 0; i <= inp.length; i++) {
+                if (inp.slice(i, i + 1) == " " || inp.slice(i, i + 1) == "") {
+                    var tempArr = inp.split(" ");
+
+                    var x = i;
+                    for (; j < tempArr.length;) {
+                        var len = tempArr[j].length;
+
+                        break;
+                    }
+                    arrLen.push(len);
+                    inp = tempArr.join(" ")
+
+                    j++;
+                }
+
+            }
+            var longestWord = largestArr(arrLen); //function call
+            return longestWord;
+        }
+
+
+        //Largest Element of array function
+        function largestArr(arrLen) {
+            var max = 0;
+            for (var i = 0; i < arrLen.length; i++) {
+                if (max < arrLen[i]) {
+                    max = arrLen[i];
+                    var index = i;
+                }
+            }
+            var otherTempArr = inp.split(" ");
+            return otherTempArr[index];
+        }
+
+        var longestWordFinal = wordLength(inp); //function call
+        document.write("<q>" + "<strong>" + longestWordFinal + "</strong>" + "</q>" + " is the longest word in string: " + "<q>" + inp + "</q>")
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        function kmToMeter(a){
+            return a * 1000;
+        }
+        function kmToFeet(a){
+            return a * 3280.84;
+        }
+        function kmToInches(a){
+            return a * 39370.1;
+        }
+        function kmToCentimeter(a){
+            return a * 100000;
+        }
+        var city1 = +prompt("Enter value in kilo meters for city 1: ");
+        var city2 = +prompt("Enter value in kilo meters for city 2: ");
+        var input = city2 - city1;
+        var ansMeter = kmToMeter(input);
+        var ansFeet = kmToFeet(input);
+        var ansInches = kmToInches(input);
+        var ansCentimeter = kmToCentimeter(input);
+        
+        document.write( "<strong>" + "Kilo Meter to Meter: " + "</strong>" + "<br/>")
+        document.write("<strong>" + input + "Km" + "</strong>" + " = " + ansMeter + " Meter" + "<br/>")
+        document.write("<br/>");
+        
+        document.write( "<strong>" + "Kilo Meter to Feet: " + "</strong>" + "<br/>")
+        document.write("<strong>" + input + "Km" + "</strong>" + " = " + ansFeet + " Feet" + "<br/>")
+        document.write("<br/>");
+        
+        document.write( "<strong>" + "Kilo Meter to Inches: " + "</strong>" + "<br/>")
+        document.write("<strong>" + input + "Km" + "</strong>" + " = " + ansInches + " Inches" + "<br/>")
+        document.write("<br/>");
+        
+        document.write( "<strong>" + "Kilo Meter to Centimeters: " + "</strong>" + "<br/>")
+        document.write("<strong>" + input + "Km" + "</strong>" + " = " + ansCentimeter + " Centimeters" + "<br/>")
+        document.write("<br/>");
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var A = ['cake', 'apple pie', 'cookie', 'chips', 'patties'];
+        var item = prompt("Welcome to ABC bakery. What do you want to order sir/ma'am? ");
+        item = item.toLowerCase();
+        matchFound = true;
+        for ( var i = 0; i < A.length; i++){
+            if ( item == A[i] ){
+                document.write(A[i] + " is <strong> available </strong> at index " + i + " in our bakery.");
+                matchFound = false;
+                break;
+            }
+            
+        }
+        if(matchFound){
+            document.write("We are sorry. " + item + " is not available in our bakery ");
+        }
+
+
+    </script>
+</body>
+</html>

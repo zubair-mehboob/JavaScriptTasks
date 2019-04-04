@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        table, tr, td{
+            /* border:1px solid black; */
+            /* border-collapse: collapse; */
+            
+            border-spacing: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <table id="myTable">
+        <tr >
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th></th>
+        </tr>
+        <tr >
+            <td>0</td>
+            <td>Jhone</td>
+            <td>10</td>
+            <td><input type="submit" value="Delete" onclick="delRow(this)"></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>9</td>
+            <td><input type="submit" value="Delete" onclick="delRow(this)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mark</td>
+            <td>10</td>
+            <td><input type="submit" value="Delete" onclick="delRow(this)"></td>
+        </tr>
+        <tr >
+            <td id="abc">3</td>
+            <td>James</td>
+            <td>8</td>
+            <td><input type="submit" value="Delete" onclick="delRow(this)"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        
+        function delRow(r){
+        var i = document.getElementById('myTable');
+        var index = r.parentNode.parentNode.rowIndex; // fetch the current row fetch it parent td fetch its parent tr fetch that tr index
+
+        i.deleteRow(index); // del that row which fetched
+        var tRow = document.getElementsByTagName('tr');
+       
+       var x = tRow.length;
+      
+       
+       // loop to update all rows first td index value
+         for ( var i = 1; i < x; i++ ){
+            tRow[i].children[0].innerHTML = i-1; // loop through each row except first row coz it has heading, then change index of first td in each row
+         }
+            
+       
+       
+        }
+    </script>
+</body>
+</html>

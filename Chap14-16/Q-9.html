@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var colorsName = ["Red", "Green", "Blue"];
+
+        for (var i = 0; i < colorsName.length; i++){
+            document.write("Index " + i + ": Element: " + colorsName[i] + ", &nbsp")
+        }
+        var addColors = prompt("What color do you want to add in this array");
+        var index = prompt("At what position do you want to add/delete element in array");
+        var position = prompt("How many elements do you want to delete in array");
+        colorsName.splice(index, position, addColors);
+        document.write("<br/>");
+        for (var i = 0; i < colorsName.length; i++){
+            document.write("Index " + i + ": Element: " + colorsName[i] + ", &nbsp")
+        }
+
+    </script>
+</body>
+</html>

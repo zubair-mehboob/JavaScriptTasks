@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        var string = prompt("Enter string: ");
+        var wordOcuurance = prompt("Find any word occuarance in prompted string: ");
+        
+        function wordCount(s, w) { // parameters are string, and word 
+            var stringToAsciiArray = [];
+            for (var i = 0; i < s.length; i++) {
+                var stringToAsciiChar = s.charCodeAt(i);
+                stringToAsciiArray.push(stringToAsciiChar);
+
+            }
+
+            word = w.charCodeAt(0);
+            var sum = 0;
+            for (var i = 0; i < stringToAsciiArray.length; i++){
+                if ( word == stringToAsciiArray[i]){
+                    sum +=  1;
+                }
+            } 
+            //var ans = String.fromCharCode(word); // ascii to string no use in this program String is library here notice S is capital 
+            return sum;
+        }
+
+        var res = wordCount(string, wordOcuurance);
+        document.write("The word " + "<q>" + wordOcuurance + "</q>" + " in a string " + "<q>" + string + "</q>" + " occurs " + res + " times ");
+    </script>
+</body>
+
+</html>

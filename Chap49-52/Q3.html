@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        input {
+            margin: 5px;
+        }
+
+        legend {
+            font-size: 25px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Student Detail Form</legend>
+        <form action=""  id="stdntForm">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="name" id="name"  class="inp">
+            <br>
+            <label for="fname">Father Name</label>
+            <br>
+            <input type="text" name="fname" id="fname" class="inp">
+            <br>
+            <label for="cls">Class</label>
+            <br>
+            <input type="text" name="cls" id="cls" class="inp">
+            <br>
+            <input type="submit" name="" id="" value="Submit" onclick="displayData()">
+        </form>
+    </fieldset>
+
+    <table id="myTable">
+        <tr id="myRow">
+            <td>""</td>
+            <td>""</td>
+            <td>""</td>
+        </tr>
+    </table>
+    
+    <!--JS Code-->
+
+    <script>
+        function displayData(){
+            var frmS = document.getElementById('stdntForm');
+            var inp = frmS.getElementsByClassName('inp');
+            var inpValArr = [];
+            for( var i = 0; i < inp.length; i++){
+                var inpVal = inp[i].value;
+                inpValArr.push(inpVal);
+                
+
+            }
+           var col = document.getElementsByTagName('td');
+           var z = col.length;
+           for (var i = 0; i < z; i++){
+            var col = document.getElementsByTagName('td');
+              var con = document.createTextNode(inpValArr[i])
+               
+               //col[i].innerHTML = inpValArr[i];
+               col[i].appendChild(con);
+           }
+           
+
+        //    var bod = document.getElementById('tblDiv');
+        //    var m = document.createElement('p');
+        //    var n = document.createTextNode("Hello World");
+        //    m.appendChild(n);
+        //    bod.appendChild(m);
+        // var m = document.createElement('table');
+        // var n = document.createElement('tr');
+        // var o = document.createElement('td');
+        // var p = document.createTextNode("Name");
+        // o.appendChild(p);
+        // n.appendChild(o)
+        // m.appendChild(n)
+        // bod.appendChild(m)
+           
+           
+           
+        }
+    </script>
+</body>
+
+</html>

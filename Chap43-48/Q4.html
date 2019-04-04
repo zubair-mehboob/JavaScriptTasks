@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div> <img src="mob pics/1.jpg"  id="p1" alt="" onmouseover="pic2Display()" onmouseout="pic1Display()"> </div>
+    </div>
+
+    <script>
+        function pic2Display(){
+            document.getElementById('p1').src = 'mob pics/2.jpg';
+        }
+        function pic1Display(){
+            document.getElementById('p1').src = 'mob pics/1.jpg';
+        }
+    </script>
+</body>
+</html>

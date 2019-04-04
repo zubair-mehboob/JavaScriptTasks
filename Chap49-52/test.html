@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="main">
+    <p>fhdaklsfhlsdkfhlaksdhfaskl para 1</p>
+    <p>lore10 para 2
+
+    </p>
+    <p>lore10 para 3
+
+    </p>
+    <p> Lorem ipsum d para 4 </p>
+    <input type="button" name="" id="" value="Click me to add a PARAGRAPH" onclick="addMe()">
+    </div>
+    <script>
+        function addMe(){
+        var para = document.createElement('p');
+        var content = document.createTextNode('Heloo I am newly added Text')
+        para.appendChild(content);
+        var main = document.getElementById('main');
+        main.appendChild(para)}
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        div{
+            display: flex;
+           
+            width: 1500px;
+            
+            justify-content: center;
+            margin: 0 auto;
+
+        }
+        div:first-child{
+            height: 800px;
+        }
+        button{
+            align-self: flex-end;
+            padding: 5px;
+            font-size: 30px;
+            color: white;
+            background-color: rgb(5, 114, 78);
+            }
+    </style>
+</head>
+<body>
+    <div>
+
+    
+    <img src="1.jpg" alt="" width="200px" height="200px"></div>
+    <div>
+    <br>
+    <button id="zI" onclick="zoomIn();">+</button>
+    <button id="zO" onclick="zoomOut();">-</button>
+    </div>
+    <script>
+        function zoomIn(){
+            
+            // Reading image element
+            var image = document.getElementsByTagName('img')[0];
+            
+            
+             // Reading current width and height of width and height attribute set in img element
+            var a = image.clientWidth; // use to read the current width set in width attribute
+            var b = image.clientHeight; // use to read the current height set in height attribute
+            
+            
+            // adding 110px in current width and 50px in current height
+            image.style.width = a + 110 + "px";
+            image.style.height = b + 50 + "px";
+        }
+
+        function zoomOut(){
+            
+            // Reading image element
+            var image = document.getElementsByTagName('img')[0];
+           
+           // Reading current width and height of width and height attribute set in img element
+            var a = image.clientWidth;
+            var b = image.clientHeight;
+           
+            
+            // subtracting 110px from current width and 50px from current height
+            image.style.width = a - 110 + "px";
+            image.style.height = b - 50 + "px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var firstName = "Hasham";
+        lastName = "Sirma";
+        fullName = "Hasham Sirma"
+        function greetUser(){
+            firstName = prompt("Enter first name: ");// global variable b/c var is not present so it will change the value of firstName variable outside the function
+            var lastName = prompt("Enter last name: ");// local variable
+            fullName = firstName.concat(" ", lastName);
+            document.write(fullName + ", Welcome to my page")
+
+        }
+
+        alert(firstName);
+        alert(lastName)
+        alert(fullName);
+        greetUser();
+    </script>
+</body>
+</html>

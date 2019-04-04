@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var wrongEntry;
+        var num1 = parseInt(prompt("Enter first number: "));
+        var num2 = parseInt(prompt("Enter second number: "));
+        var op = prompt("Enter which earth matric operation do you want to perform: " + "multiplication" + '\n' + "division" + '\n' + "addition" + '\n' + "subtration" + '\n' + "modulus");
+        var ans = "";
+        if (op === "multiplication"){
+            ans = num1 * num2;
+            op = "*";
+        }
+        
+        else if (op === "division"){
+            ans = num1 / num2;
+            op = "/";
+        }
+        else if (op === "addition"){
+            ans = num1 + num2;
+            op = "+";
+        }
+        else if (op === "subtraction"){
+            ans = num1 - num2;
+            op = "-";
+        }
+        else if (op === "modulus"){
+            ans = num1 % num2;
+            op = "%";
+        }
+        else{
+            alert("wrong entry"); 
+            wrongEntry = true;  
+        }
+
+        if(!wrongEntry){
+
+        document.write("Answer of " + num1 + op + num2 + " is " + ans);
+        }
+        else{
+            document.write("Sorry Try again")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        var inp = prompt("Enter string not more than 25 words: ");
+
+
+        function delVowels(a) { // a = inp
+            a = a.split("");
+            var sum = 0;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] == "a" || a[i] == "e" || a[i] == "i" || a[i] == "o" || a[i] == "u") {
+                    if (a[i + 1] != "a" && a[i + 1] != "e" && a[i + 1] != "i" && a[i + 1] != "o" && a[i + 1] != "u") { // check if next element is also vowel
+                        a.splice(i, 1);
+
+                        sum += 1;
+                    }
+                    else { // if next element is also vowel del that element and also decrement index because the next element's index became deleted element's index  
+                        a.splice(i, 1);
+                        i -= 1;
+                        }
+                }
+
+            }
+            a = a.join(" ")
+            return a;
+        }
+
+        var ans = delVowels(inp);
+        alert(ans)
+    </script>
+</body>
+
+</html>

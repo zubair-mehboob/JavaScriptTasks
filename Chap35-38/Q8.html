@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        
+        function pythaTheorem(a, b){
+            var hyp;
+            
+            a = square(a);
+            b = square(b);
+            
+            hyp = a + b;
+            hyp = Math.sqrt(hyp);
+            hyp = hyp.toFixed(2); 
+            return hyp; 
+        }
+        function square(x){
+            var ans = x**2; // square of any number 2 indicates power where x is base ** use to take power
+            return ans; 
+        }
+        var base = +prompt("Enter base: ");
+        var perpendicular = +prompt("Enter perpendicular: ");
+        var result = pythaTheorem(base, perpendicular);
+        alert(result);
+    </script>    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewpo5rt" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+
+        var word = prompt("Enter a word to check either it is palindrome or not: ");
+        //var counter = Math.ceil(a.length/2)
+
+        function plindromeCheck(a) {
+            var b = a.length - 1;
+            var matchFound = false;
+            var sum = 0;
+
+            // to check those words which have even length
+            if (a.length % 2 === 0) {
+                for (var i = 0; i < a.length / 2; i++) { // if there are 6 words then we need to check three times b/c we are checking pair of words are the equal or not
+                    if (a[i] == a[b - i]) {  //it checks is 1st character is equal to last character if yes it adds 1 in sum
+                        //matchFound = true;
+                        sum += 1;
+                    }
+                }
+                if ( sum == a.length / 2){// if all extreme characters are equal the it make math found true
+                    matchFound = true;
+                }
+            }
+
+            // to check those words which have odd length
+            else {
+                var counter = Math.floor(a.length / 2);
+                for (var i = 0; i < counter; i++) {
+                    if (a[i] == a[b - i]) {
+                        //matchFound = true;
+                        sum += 1;
+                    }
+                }
+                if ( sum == counter){
+                    matchFound = true;
+                }
+            }
+
+            if (matchFound) {
+                //document.write("The word is plindrome")
+                var string = "The word is palindrome";
+                return string;
+            }
+            else {
+                //document.write("Oops!!! word is not plindrome")
+                string = "Oops!!! word is not palindrome";
+                return string;
+            }
+        }
+
+        // function call
+
+        var ans = plindromeCheck(word);
+        document.write(ans);
+    </script>
+</body>
+
+</html>

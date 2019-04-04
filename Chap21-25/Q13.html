@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        var inp = prompt("Enter user name: ");
+        alert(inp.charCodeAt())
+        matchFound = true;
+        for ( var i = 0; i < inp.length; i++){
+            chk = inp.charCodeAt(i)
+           
+            if ( chk == 33 || chk == 44 || chk == 46 || chk == 64){
+                alert("Please enter valid username.");
+                matchFound = false;
+                break;
+            }
+
+        }
+        
+        if (matchFound){
+        alert(inp + " Welcome you are logged in");}
+       
+    </script>
+</body>
+</html>

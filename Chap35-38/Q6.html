@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        function factorial(a){
+            var ans = 1; 
+            
+            for (var i = a; i >= 1; i-- ){
+                ans = ans * i;
+            }
+            return ans;
+        }
+
+        var num = +prompt("Enter number whose factorial you want to calculate: ");
+        var result = factorial(num);
+        document.write("Factorial of " + num + " is: " + result);
+    </script>
+</body>
+</html>

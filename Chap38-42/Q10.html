@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        var inp = +prompt("Enter amount: ");
+
+        function moneyWithdraw(z){
+        var ans;
+        var res = [];
+        if (inp % 100 == 0) {
+            ans = inp / 100;
+            alert(ans);
+        }
+        else {
+            ans = inp / 100;
+            ans = ans.toString()
+            ans = ans.split(".");
+            var hundreads = Number(ans[0]);
+            var other = Number(ans[1]);
+            other = other * 10;
+            if (other > 50) {
+                var diff = other - 50;
+                var tens = diff / 10;
+                var fifty = 1;
+            }
+            else {
+                fifty = 1;
+                tens = 0;
+            }
+            res.push(hundreads, fifty, tens);
+            return res;
+        }
+        }
+
+        var finalAns = moneyWithdraw(inp);
+        //alert(finalAns)
+        document.write(  " Your amount is " + inp + ". " + "<br/>" + "You will have " + finalAns[0] + " hundread notes, " + finalAns[1] + " fifty note and " + finalAns[2] + " ten notes." )
+    </script>
+</body>
+
+</html>
